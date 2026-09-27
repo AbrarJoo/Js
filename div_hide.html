@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auto Hide Div</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #111;
+        font-family: Arial, sans-serif;
+      }
+
+      #box {
+        width: 350px;
+        padding: 30px;
+        text-align: center;
+        background: white;
+        border-radius: 12px;
+      }
+
+      #box h2 {
+        margin-bottom: 10px;
+      }
+
+      #box p {
+        color: #555;
+      }
+    </style>
+    >
+  </head>
+  <body>
+    <div id="box">
+      <h2>Auto Hide Box</h2>
+      <p>This box should disappear automatically.</p>
+    </div>
+
+    <script src="div_hide.js"></script>
+  </body>
+</html>
