@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>hello</h1>
+    <h1>this</h1>
+    <h1>is</h1>
+    <h1>JooTech</h1>
+  </body>
+
+  <script>
+    let allHeading = document.querySelectorAll("h1");
+    console.log(allHeading);
+    //using foreach loop
+    allHeading.forEach((item, index) => {
+      console.log(item.innerHTML);
+    });
+  </script>
+</html>

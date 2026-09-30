@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <body></body>
-  <script src="new.js"></script>
+  <body>
+    <h1 id="heading">Welcome to<u>JooTech</u>.</h1>
+
+    <div id="res"></div>
+  </body>
+  <script>
+    console.log(window.document);
+    let headingElement = document.getElementById("heading");
+    let resElement = document.getElementById("res");
+    console.log(headingElement); //got the element in console
+    console.log(headingElement.innerHTML); //with u tag
+    console.log(headingElement.innerText); //only text
+    resElement.innerHTML = headingElement.innerHTML;
+  </script>
 </html>

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      .loginmodel {
+        top: 0px;
+        width: 30%;
+        height: 100vh;
+        transition: 0.5s;
+        position: fixed;
+        right: -500%;
+        background-color: #ccc;
+        padding: 40px;
+      }
+
+      .loginmodel span {
+        font-size: 30px;
+        cursor: pointer;
+      }
+      .headingmodel {
+        display: flex;
+        margin-top: 10px;
+        justify-content: space-between;
+      }
+      .headingmodel h3 {
+        font-size: 20px;
+      }
+
+      .loginmodel form {
+        margin-top: 100px;
+      }
+
+      .loginmodel form label {
+        display: block;
+      }
+
+      .loginmodel form input {
+        width: 100%;
+        height: 40px;
+        border-radius: 5px;
+        margin-top: 10px;
+      }
+
+      .loginmodel form button {
+        width: 100%;
+        margin-top: 20px;
+        padding: 10px;
+        border: 0px;
+        background-color: rgb(21, 196, 255);
+        font-size: 20px;
+        border-radius: 20px;
+      }
+
+      .loginmodel form p {
+        margin-top: 15px;
+        font-size: smaller;
+      }
+
+      .showmodel {
+        right: 0%;
+      }
+
+      /* .loginmodel form p u{
+        color: blue;
+      } */
+    </style>
+  </head>
+  <body>
+    <button id="login">Login</button>
+    <div class="loginmodel showmodel">
+      <span>&times;</span>
+      <div class="headingmodel">
+        <h3>Login</h3>
+        <p>Use Email,instead</p>
+      </div>
+
+      <form action="">
+        <label for="">Mobile Number:</label>
+        <input type="text" />
+        <button>Login</button>
+        <p>Don't have an account? <a href="">Create Account</a></p>
+      </form>
+    </div>
+  </body>
+  <script>
+    let loginbtn = document.querySelector("#login");
+    let closebtn = document.querySelector(".loginmodel span");
+    let loginModelElement = document.querySelector(".loginmodel");
+    loginbtn.addEventListener("click", () => {
+      loginModelElement.classList.add("showmodel");
+    });
+
+    closebtn.addEventListener("click", () => {
+      loginModelElement.classList.remove("showmodel");
+    });
+  </script>
+</html>

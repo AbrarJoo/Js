@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        font-family: serif;
+      }
+      h1 {
+        text-align: center;
+        padding: 30px 0;
+      }
+      .faqmid {
+        max-width: 1000px;
+        margin: auto;
+        /* border:1px solid black; */
+      }
+      .faqitems {
+        border: 1px solid #ccc;
+      }
+      .faqitems h3 {
+        padding: 15px;
+        background-color: yellowgreen;
+        position: relative;
+        cursor: pointer;
+      }
+      .faqitems h3 span {
+        position: absolute;
+        right: 10px;
+      }
+      .faqitems p {
+        font-size: 18px;
+        padding: 10px;
+        line-height: 30px;
+        margin-bottom: 10px;
+        display: none;
+      }
+      .showans {
+        display: block !important;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Frequently asked Questions</h1>
+    <div class="faqmid">
+      <div class="faqitems">
+        <h3>What is an Operating System? <span>+</span></h3>
+        <p>
+          An Operating System (OS) is system software that manages the hardware
+          and software resources of a computer. It acts as an interface between
+          the user and the computer hardware. It manages important tasks such as
+          memory management, process management, file management, device
+          management, and security. Examples of operating systems include
+          Windows, Linux, macOS, Android, and iOS.
+        </p>
+      </div>
+      <div class="faqitems">
+        <h3>What is Computer Networking? <span>+</span></h3>
+        <p>
+          Computer networking is the process of connecting two or more computers
+          or devices so they can communicate and share resources. Networks allow
+          devices to exchange data, access the internet, share files, and use
+          shared hardware such as printers. Common networking devices include
+          routers, switches, modems, and access points. Networks can be
+          classified into LAN, WAN, MAN, and other types based on their size and
+          purpose.
+        </p>
+      </div>
+      <div class="faqitems">
+        <h3>What is a Database? <span>+</span></h3>
+        <p>
+          A database is an organized collection of data that allows information
+          to be stored, managed, updated, and retrieved efficiently. Databases
+          are commonly used in websites, banking systems, hospitals, schools,
+          and business applications. A Database Management System (DBMS) is
+          software used to manage databases. Examples include MySQL, PostgreSQL,
+          Oracle Database, and MongoDB.
+        </p>
+      </div>
+
+      <div class="faqitems">
+        <h3>What is Cybersecurity? <span>+</span></h3>
+        <p>
+          Cybersecurity is the practice of protecting computers, networks,
+          applications, and data from unauthorized access, attacks, damage, or
+          theft. It involves techniques such as authentication, encryption,
+          firewalls, antivirus software, vulnerability testing, and security
+          monitoring. Common cyber threats include malware, phishing,
+          ransomware, password attacks, and denial-of-service attacks. The main
+          goals of cybersecurity are to maintain the confidentiality, integrity,
+          and availability of information.
+        </p>
+      </div>
+    </div>
+  </body>
+  <script>
+    let allQue = document.querySelectorAll(".faqitems h3");
+    allQue.forEach((item, index) => {
+      item.addEventListener("click", () => {
+        allQue.forEach((heading, i) => {
+          if (index != i) {
+            heading.lastElementChild.innerHTML = "+";
+            heading.nextElementSibling.classList.remove("showans");
+          }
+        });
+        //cureent ques show hide
+        if (item.lastElementChild.innerHTML == "+") {
+          item.lastElementChild.innerHTML = "-";
+        } else {
+          item.lastElementChild.innerHTML = "+";
+        }
+
+        //symbol change
+        item.nextElementSibling.classList.toggle("showans");
+      });
+    });
+  </script>
+</html>
