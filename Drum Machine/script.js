@@ -29,7 +29,7 @@ pads.forEach(function (pad) {
 
 document.addEventListener("keydown", function (event) {
   let key = event.key.toUpperCase();
-  let audio = document.getElementById(key);
+  let audio = document.querySelector("#" + key);
   if (audio) {
     playsound(audio);
   }
