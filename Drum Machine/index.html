@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drum Machine</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #111;
+        font-family: Arial, sans-serif;
+      }
+
+      #drum-machine {
+        width: 650px;
+        padding: 35px;
+        background: #222;
+        border: 2px solid #444;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      }
+
+      #display {
+        height: 70px;
+        margin-bottom: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background: #111;
+        border: 2px solid #555;
+        border-radius: 8px;
+
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      #pad-bank {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+      }
+
+      .drum-pad {
+        height: 120px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background: #333;
+        color: white;
+
+        border: 2px solid #555;
+        border-radius: 10px;
+
+        font-size: 28px;
+        font-weight: bold;
+
+        cursor: pointer;
+        transition: 0.15s;
+      }
+
+      .drum-pad:hover {
+        background: #444;
+        transform: translateY(-3px);
+      }
+
+      .drum-pad:active {
+        transform: scale(0.95);
+        background: #666;
+      }
+
+      .clip {
+        display: none;
+      }
+
+      @media (max-width: 700px) {
+        #drum-machine {
+          width: 90%;
+          padding: 20px;
+        }
+
+        .drum-pad {
+          height: 100px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div id="drum-machine">
+
+      <p id="display">Drum Machine</p>
+
+      <div id="pad-bank">
+
+        <button class="drum-pad" id="heater-1">
+          Q
+          <audio
+            class="clip"
+            id="Q"
+            src="https://cdn.freecodecamp.org/curriculum/drum/Heater-1.mp3">
+          </audio>
+        </button>
+
+        <button class="drum-pad" id="heater-2">
+          W
+          <audio
+            class="clip"
+            id="W"
+            src="https://cdn.freecodecamp.org/curriculum/drum/Heater-2.mp3">
+          </audio>
+        </button>
+
+        <button class="drum-pad" id="heater-3">
+          E
+          <audio
+            class="clip"
+            id="E"
+            src="https://cdn.freecodecamp.org/curriculum/drum/Heater-3.mp3">
+          </audio>
+        </button>
+
+        <button class="drum-pad" id="heater-4">
+          A
+          <audio
+            class="clip"
+            id="A"
+            src="https://cdn.freecodecamp.org/curriculum/drum/Heater-4_1.mp3">
+          </audio>
+        </button>
+
+        <button class="drum-pad" id="clap">
+          S
+          <audio
+            class="clip"
+            id="S"
+            src="https://cdn.freecodecamp.org/curriculum/drum/Heater-6.mp3">
+          </audio>
+        </button>
+
+        <button class="drum-pad" id="open-hh">
+          D
+          <audio
+            class="clip"
+            id="D"
+            src="https://cdn.freecodecamp.org/curriculum/drum/Dsc_Oh.mp3">
+          </audio>
+        </button>
+
+        <button class="drum-pad" id="kick-n-hat">
+          Z
+          <audio
+            class="clip"
+            id="Z"
+            src="https://cdn.freecodecamp.org/curriculum/drum/Kick_n_Hat.mp3">
+          </audio>
+        </button>
+
+        <button class="drum-pad" id="kick">
+          X
+          <audio
+            class="clip"
+            id="X"
+            src="https://cdn.freecodecamp.org/curriculum/drum/RP4_KICK_1.mp3">
+          </audio>
+        </button>
+
+        <button class="drum-pad" id="closed-hh">
+          C
+          <audio
+            class="clip"
+            id="C"
+            src="https://cdn.freecodecamp.org/curriculum/drum/Cev_H2.mp3">
+          </audio>
+        </button>
+
+      </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+  </body>
+</html>
