@@ -1,3 +1,4 @@
+//classical inheritance -- make classes then extend
 class User {
   constructor(name, address, username, email) {
     this.name = name;
@@ -38,3 +39,16 @@ let u2 = new User("Abrar", "Srinagar", "abrar123", "abrar@gmail.com");
 let u3 = new User("Rahul", "Delhi", "rahul_dev", "rahul@gmail.com");
 
 let a1 = new Admin("Ali", "Mumbai", "ali_admin", "ali@gmail.com");
+
+//prototypal inheritance ---only in old javascript  object-> object inheritance
+
+let coffee = {
+  color: "dark",
+  drink: function () {
+    console.log("drinking .....");
+  },
+};
+
+let arabiataCoffee = Object.create(coffee);
+console.log(arabiataCoffee.drink);
+console.log(arabiataCoffee);
